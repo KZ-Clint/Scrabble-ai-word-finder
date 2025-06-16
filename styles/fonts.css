@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Cybertron';
+    src: url('/fonts/CybertronCondensed-2YDw.ttf') format('truetype');
+    /* Add more src declarations for different font formats if necessary */
+    /* Add additional font properties if desired (e.g., font-weight, font-style) */
+}
+
+@font-face {
+    font-family: 'Cybertron2';
+    src: url('/fonts/Cybertron-rpD9.ttf') format('truetype');
+    /* Add more src declarations for different font formats if necessary */
+    /* Add additional font properties if desired (e.g., font-weight, font-style) */
+}
