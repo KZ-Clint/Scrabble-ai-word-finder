@@ -25,16 +25,17 @@ export default function Home() {
 
 
   const handleSearchChange = (e) => {
-     const regexOnlyAlphabets = /^[a-zA-Z]*$/;
-     if(!regexOnlyAlphabets.test(e.target.value)) return;
-     setLetters(e.target.value)
+    setError("")
+    const regexOnlyAlphabets = /^[a-zA-Z]*$/;
+    if(!regexOnlyAlphabets.test(e.target.value)) return;
+    setLetters(e.target.value)
   } 
 
 
   const startAnimation = async () => {
     setIsButtonLoading(true)
     if( letters.length < 2 || letters.length > 9 ) {
-      setError("Letters can not be less than 2 or more than 9")
+      setError("Letters can not be less than 2 or more than 9!!")
       setIsButtonLoading(false)
       return;
     }
@@ -181,6 +182,7 @@ export default function Home() {
               <div className={styles.input_button_box} >
                 <div className={styles.input_wrapper} > 
                   <label> Input Letters </label> 
+                  { error && <p> {error} </p> }
                   <input type="text" placeholder="Input your letters...." value={letters} onChange={handleSearchChange} />
                 </div> 
                 {
