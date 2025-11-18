@@ -55,7 +55,7 @@ export default function Home() {
     setIsTypingComplete(false);
 
       try {
-        const res = await axios.post(`https://scrabble-ai-backend-production.up.railway.app/api/find-words`, { letters } ) 
+        const res = await axios.post(`https://scrabble-ai-backend.onrender.com/api/find-words`, { letters } ) 
         console.log(res)
         setWords(res.data.words)
         setStats(res.data.stats)
